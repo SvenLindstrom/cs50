@@ -1,0 +1,90 @@
+sort1 uses: BUbble sort
+
+How do you know?: it was the slowest for the reversed data set
+
+sort2 uses: Merge sort
+
+How do you know?: it was the fastest with large data set
+
+sort3 uses: Selection sort
+
+How do you know?: it was the slowest for the sorted data set
+
+
+
+
+
+
+
+
+sort1: Bubble sort
+    random10000
+        0.3s
+    random5000
+        0.1s
+    random50000
+        7.4s
+
+    reversed10000
+        0.2s
+    reversed5000
+        0.07s
+    reversed50000
+        6.3s
+
+    sorted10000
+        0.09s
+    sorted5000
+        0.04s
+    sorted50000
+        0.5s
+sort3: Selection sort
+    random10000
+        0.3s
+    random5000
+        0.1s
+    random50000
+        7.4s
+
+    reversed10000
+        0.1s
+    reversed5000
+        0.05s
+    reversed50000
+        3.5s
+
+    sorted10000
+        0.1s
+    sorted5000
+        0.05s
+    sorted50000
+        3.1s
+sort2: Merge sort
+    random10000
+        0.09s
+    random5000
+        0.1s
+    random50000
+        0.4s
+
+    reversed10000
+        0.1s
+    reversed5000
+        0.02s
+    reversed50000
+        0.5s
+
+    sorted10000
+        0.1s
+    sorted5000
+        0.03s
+    sorted50000
+        0.3s
+
+
+
+
+
+
+
+

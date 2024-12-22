@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Best languege so far?</h3>
+                <p id="quest" style="visibility: hidden">c</p>
+                <button id="wrong1" type="button" class="btn">C</button>
+                <button id="wrong2" type="button" class="btn">Phython</button>
+                <button id="correct" type="button" class="btn">Java Script</button>
+                <button id="wrong3" type="button" class="btn">Scratch</button>
+                <!-- TODO: Add multiple choice question here -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>whats the best color?</h3>
+                <input id="text" type="text">
+                <input id="submit" type="submit">
+                <p id="text_field" style="visibility: hidden">c</p>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+        <script>
+
+            function wrong()
+            {
+                document.getElementById('quest').innerHTML = "Incorrect";
+                document.getElementById('quest').style.visibility = "visible";
+            }
+
+            document.getElementById('correct').addEventListener('click', function()
+            {
+                document.getElementById('correct').style.backgroundColor = 'green';
+                document.getElementById('quest').innerHTML = "Correct!";
+                document.getElementById('quest').style.visibility = "visible";
+            });
+
+            document.getElementById('wrong1').addEventListener("click", function()
+            {
+                document.getElementById('wrong1').style.backgroundColor = 'red';
+                wrong();
+            });
+
+            document.getElementById('wrong2').addEventListener('click',  function()
+            {
+                document.getElementById('wrong2').style.backgroundColor = 'red';
+                wrong();
+            });
+            document.getElementById('wrong3').addEventListener('click',  function()
+            {
+                document.getElementById('wrong3').style.backgroundColor = 'red';
+                wrong();
+            });
+
+            document.getElementById('submit').addEventListener('click', function()
+            {
+                let answer = document.getElementById('text').value;
+
+                if(answer === "green")
+                {
+                    document.getElementById('text').style.backgroundColor = 'green';
+                    document.getElementById('text_field').innerHTML = "Correct!";
+                    document.getElementById('text_field').style.visibility = "visible";
+                }
+                else
+                {
+                    document.getElementById('text').style.backgroundColor = 'red';
+                    document.getElementById('text_field').innerHTML = "Incorrect";
+                    document.getElementById('text_field').style.visibility = "visible";
+                }
+            });
+
+
+
+
+        </script>
+    </body>
+</html>
